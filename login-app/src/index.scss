@@ -1,0 +1,59 @@
+:root {
+  --body-bg: hsl(229deg 20% 15%);
+  --copy-color: hsl(229deg 20% 85%);
+  --heading-color: white;
+  --primary: hsl(229deg 40% 50%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: calc(1rem + 0.5vw);
+  line-height: 1.6;
+  color-scheme: light dark;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--body-bg);
+  color: var(--copy-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.0625rem;
+}
+
+h6, h5, h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 800
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+input, button, textarea, select {
+  font-size: inherit;
+  font-family: inherit;
+}
