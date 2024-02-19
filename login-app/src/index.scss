@@ -1,9 +1,31 @@
 :root {
   --primary-angle: 229deg;
-  --body-bg: hsl(var(--primary-angle) 20% 15%);
-  --copy-color: hsl(var(--primary-angle) 20% 85%);
-  --heading-color: white;
+  
+  --body-bg-light: hsl(var(--primary-angle) 20% 98%);
+  --body-bg-dark: hsl(var(--primary-angle) 20% 15%);
+  --body-bg: var(--body-bg-dark);
+
+  --surface-color-light: hsl(var(--primary-angle) 20% 93%);
+  --surface-color-dark: hsl(var(--primary-angle) 20% 25%);
+  --surface-color: var(--surface-color-dark);
+  
+  --copy-color-light: hsl(var(--primary-angle) 20% 35%);
+  --copy-color-dark: hsl(var(--primary-angle) 20% 85%);
+  --copy-color: var(--copy-color-dark);
+
+  --heading-color-light: hsl(var(--primary-angle) 20% 15%);
+  --heading-color-dark: white;
+  --heading-color: var(--heading-color-dark);
+
   --primary: hsl(var(--primary-angle) 40% 50%);
+  --primary-dark: hsl(var(--primary-angle) 40% 40%);
+
+  @media (prefers-color-scheme: light) {
+    --body-bg: var(--body-bg-light);
+    --surface-color: var(--surface-color-light);
+    --copy-color: var(--copy-color-light);
+    --heading-color: var(--heading-color-light);
+  }
 }
 
 *, *::before, *::after {

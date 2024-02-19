@@ -6,6 +6,8 @@
 
 .primaryButton {
     background: var(--primary);
+    color: var(--copy-color-dark);
+    cursor: pointer;
     border: 0;
     line-height: 1;
     padding: 0.5rem 1rem;
@@ -13,6 +15,15 @@
     font-size: 0.8rem;
     font-weight: 700;
     border-radius: 6px;
+
+    &:hover {
+        color: var(--heading-color-dark);
+    }
+
+    &:active {
+        background: var(--primary-dark);
+        color: var(--copy-color-dark);
+    }
 }
 
 .formField {
@@ -33,6 +44,7 @@
     padding: 0.5rem;
     border: hsl(var(--primary-angle) 20% 30%) solid 2px;
     border-radius: 6px;
+    background: var(--surface-color);
 
     &:focus-visible {
         outline: var(--primary) solid 1px;
