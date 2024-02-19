@@ -1,8 +1,9 @@
 :root {
-  --body-bg: hsl(229deg 20% 15%);
-  --copy-color: hsl(229deg 20% 85%);
+  --primary-angle: 229deg;
+  --body-bg: hsl(var(--primary-angle) 20% 15%);
+  --copy-color: hsl(var(--primary-angle) 20% 85%);
   --heading-color: white;
-  --primary: hsl(229deg 40% 50%);
+  --primary: hsl(var(--primary-angle) 40% 50%);
 }
 
 *, *::before, *::after {

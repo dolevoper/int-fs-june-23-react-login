@@ -6,10 +6,10 @@ export function LoginPage() {
         <form className={styles.wrapper}>
             <h1>Login</h1>
             <FormField htmlFor="username" label="Username">
-                <input id="username" name="username" autoFocus />
+                <input id="username" className={styles.input} name="username" autoFocus />
             </FormField>
             <FormField htmlFor="password" label="Password">
-                <input type="password"  id="possword" name="password"/>
+                <input type="password" className={styles.input} id="possword" name="password"/>
             </FormField>
             <button className={styles.primaryButton}>Login</button>
         </form>

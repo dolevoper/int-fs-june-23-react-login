@@ -24,7 +24,17 @@
         font-weight: 600;
 
         &:has(+ input:focus-visible) {
-            color: var(--heading-color);
+            color: var(--primary);
         }
+    }
+}
+
+.input {
+    padding: 0.5rem;
+    border: hsl(var(--primary-angle) 20% 30%) solid 2px;
+    border-radius: 6px;
+
+    &:focus-visible {
+        outline: var(--primary) solid 1px;
     }
 }
