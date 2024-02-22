@@ -1,8 +1,11 @@
 import { PropsWithChildren } from "react";
 import axios from "axios";
 import styles from "./LoginPage.module.scss";
+import { useNavigate } from "react-router";
 
 export function LoginPage() {
+  const navigate = useNavigate();
+
   return (
     <form
       className={styles.wrapper}
@@ -19,7 +22,9 @@ export function LoginPage() {
             password,
           });
 
-          console.log(res);
+          localStorage.setItem("token", res.data);
+
+          navigate("/");
         } catch {
           console.error("oops");
         }

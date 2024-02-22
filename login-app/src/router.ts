@@ -13,7 +13,12 @@ export const router = createBrowserRouter([
                 index: true,
                 Component: MainPage,
                 async loader() {
-                    const res = await axios.get("http://localhost:3000/profile");
+                    const token = localStorage.getItem("token");
+                    const res = await axios.get("http://localhost:3000/profile", {
+                        headers: {
+                            Authorization: `Bearer ${token}`
+                        }
+                    });
 
                     return res.data as { username: string, role: string };
                 }
