@@ -1,7 +1,12 @@
 import { json } from "body-parser";
 import express from "express";
+import cors from "cors";
 
 const app = express();
+
+if (process.env.NODE_ENV === "local") {
+    app.use(cors());
+}
 
 app.use(json());
 
