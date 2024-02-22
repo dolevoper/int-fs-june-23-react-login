@@ -26,4 +26,12 @@ app.post("/login", (req, res) => {
     res.end();
 });
 
+app.get("/profile", (req, res) => {
+    res.status(200);
+    res.send({
+        username: "admin",
+        role: "Administrator"
+    });
+});
+
 app.listen(3000, () => console.log("Server listening on port 3000"));
